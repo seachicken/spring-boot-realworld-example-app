@@ -102,6 +102,7 @@ public class ArticleQueryService {
     List<String> articleIds = articleReadService.queryArticles(tag, author, favoritedBy, page);
     int articleCount = articleReadService.countArticle(tag, author, favoritedBy);
     if (articleIds.size() == 0) {
+      // change something
       return new ArticleDataList(new ArrayList<>(), articleCount);
     } else {
       List<ArticleData> articles = articleReadService.findArticles(articleIds);

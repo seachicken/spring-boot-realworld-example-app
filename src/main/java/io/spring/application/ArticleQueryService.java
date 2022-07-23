@@ -99,6 +99,7 @@ public class ArticleQueryService {
 
   public ArticleDataList findRecentArticles(
       String tag, String author, String favoritedBy, Page page, User currentUser) {
+    // Changed
     List<String> articleIds = articleReadService.queryArticles(tag, author, favoritedBy, page);
     int articleCount = articleReadService.countArticle(tag, author, favoritedBy);
     if (articleIds.size() == 0) {

@@ -16,4 +16,5 @@ jobs:
         fetch-depth: 0
         # https://github.com/actions/checkout/issues/124
         ref: ${{ github.event.pull_request.head.ref }}
+    - run: ls -lsa ./libs/jdtls/workspace
     - run: inga --back-path . --exclude "**/src/test/**" --github-token ${{ secrets.GITHUB_TOKEN }}

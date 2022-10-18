@@ -62,6 +62,7 @@ public class Article {
       this.body = body;
       this.updatedAt = new DateTime();
     }
+    // test
   }
 
   public static String toSlug(String title) {

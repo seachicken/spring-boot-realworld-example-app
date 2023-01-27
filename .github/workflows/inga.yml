@@ -7,7 +7,6 @@ jobs:
   inga-analysis:
 
     runs-on: ubuntu-latest
-    container: ghcr.io/seachicken/inga:latest-java
 
     steps:
     - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"

@@ -18,4 +18,4 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
     - uses: seachicken/inga@java
       with:
-        exclude "src/test/**"
+        exclude: "src/test/**"

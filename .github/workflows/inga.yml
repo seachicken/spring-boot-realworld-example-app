@@ -18,3 +18,4 @@ jobs:
     - uses: seachicken/inga-action/java@java
       with:
         exclude: "src/test/**"
+        github-token: ${{ secrets.GITHUB_TOKEN }}

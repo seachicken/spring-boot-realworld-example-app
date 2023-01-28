@@ -14,12 +14,12 @@ jobs:
         fetch-depth: 0
         # https://github.com/actions/checkout/issues/124
         ref: ${{ github.event.pull_request.head.ref }}
-    - uses: seachicken/inga-action@main
+    - uses: seachicken/inga-action@report
       with:
         language: "java"
         exclude: "src/test/**"
         github-token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/upload-artifact@v3
-      with:
-        name: reports
-        path: reports/
+          #- uses: actions/upload-artifact@v3
+          #  with:
+          #    name: reports
+          #    path: reports/

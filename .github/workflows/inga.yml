@@ -17,6 +17,6 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
     - uses: seachicken/inga-action/java@java
       with:
-        root-path: $GITHUB_WORKSPACE
+        root-path: ${{ github.workspace }}
         exclude: "src/test/**"
         github-token: ${{ secrets.GITHUB_TOKEN }}

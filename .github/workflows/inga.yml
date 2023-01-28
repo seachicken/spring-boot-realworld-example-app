@@ -16,6 +16,6 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
     - uses: seachicken/inga-action@java
       with:
-        lang: "java"
+        language: "java"
         exclude: "src/test/**"
         github-token: ${{ secrets.GITHUB_TOKEN }}

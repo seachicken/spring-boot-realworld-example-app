@@ -10,8 +10,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: seachicken/inga-action@java
+    - uses: seachicken/inga-action/java@java
       with:
-        lang: "java"
         exclude: "src/test/**"
         github-token: ${{ secrets.GITHUB_TOKEN }}

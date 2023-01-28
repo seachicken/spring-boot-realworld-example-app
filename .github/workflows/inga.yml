@@ -19,7 +19,7 @@ jobs:
         language: "java"
         exclude: "src/test/**"
         github-token: ${{ secrets.GITHUB_TOKEN }}
-          #- uses: actions/upload-artifact@v3
-          #  with:
-          #    name: reports
-          #    path: reports/
+    - uses: actions/upload-artifact@v3
+      with:
+        name: reports
+        path: dist/

@@ -25,9 +25,9 @@ jobs:
         language: "java"
         exclude: "src/test/**"
         github-token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/upload-pages-artifact@v1
-      with:
-        path: inga-ui/reports
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+          #- uses: actions/upload-pages-artifact@v1
+          #  with:
+          #    path: inga-ui/reports
+          #- name: Deploy to GitHub Pages
+          #  id: deployment
+          #  uses: actions/deploy-pages@v1

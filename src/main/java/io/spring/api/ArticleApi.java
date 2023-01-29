@@ -35,6 +35,7 @@ public class ArticleApi {
   @GetMapping
   public ResponseEntity<?> article(
       @PathVariable("slug") String slug, @AuthenticationPrincipal User user) {
+    // aa
     return articleQueryService
         .findBySlug(slug, user)
         .map(articleData -> ResponseEntity.ok(articleResponse(articleData)))

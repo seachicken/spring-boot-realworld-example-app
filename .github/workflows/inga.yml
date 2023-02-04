@@ -1,4 +1,4 @@
-name: Inga analysis
+name: Inga Analysis
 
 on:
   pull_request:
@@ -7,13 +7,6 @@ jobs:
   inga-analysis:
 
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
     - uses: actions/checkout@v3
@@ -21,16 +14,8 @@ jobs:
         fetch-depth: 0
         # https://github.com/actions/checkout/issues/124
         ref: ${{ github.event.pull_request.head.ref }}
-    - uses: seachicken/inga-action@base
+    - uses: seachicken/inga-action@main
       with:
         language: "java"
         exclude: "src/test/**"
         report-base: ${{ github.event.repository.name }}
-    - uses: actions/upload-pages-artifact@v1
-      with:
-        path: inga/reports/
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
-      with:
-        preview: true

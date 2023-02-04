@@ -18,4 +18,3 @@ jobs:
       with:
         language: "java"
         exclude: "src/test/**"
-        report-base: ${{ github.event.repository.name }}

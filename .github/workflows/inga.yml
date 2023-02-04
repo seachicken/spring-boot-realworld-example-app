@@ -25,7 +25,7 @@ jobs:
       with:
         language: "java"
         exclude: "src/test/**"
-        base: ${{ github.event.repository.name }}
+        report-base: ${{ github.event.repository.name }}
     - uses: actions/upload-pages-artifact@v1
       with:
         path: inga-ui/reports/

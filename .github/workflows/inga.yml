@@ -28,7 +28,7 @@ jobs:
         report-base: ${{ github.event.repository.name }}
     - uses: actions/upload-pages-artifact@v1
       with:
-        path: inga-ui/reports/
+        path: inga/reports/
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v1

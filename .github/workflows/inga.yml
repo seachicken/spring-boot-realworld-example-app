@@ -16,7 +16,7 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
     - run: echo $GITHUB_SERVER_URL
     - run: echo $GITHUB_REPOSITORY
-    - run: echo $github.event.pull_request.head.sha
+    - run: echo ${{ github.event.pull_request.head.sha }}
     - uses: seachicken/inga-action@main
       with:
         language: "java"

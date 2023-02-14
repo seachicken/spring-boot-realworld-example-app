@@ -1,4 +1,4 @@
-name: Inga analysis
+name: Inga Analysis
 
 on:
   pull_request:
@@ -14,8 +14,11 @@ jobs:
         fetch-depth: 0
         # https://github.com/actions/checkout/issues/124
         ref: ${{ github.event.pull_request.head.ref }}
+    - run: echo $GITHUB_SERVER_URL
+    - run: echo $GITHUB_REPOSITORY
+    - run: echo ${{ github.event.pull_request.head.sha }}
     - uses: seachicken/inga-action@main
       with:
         language: "java"
         exclude: "src/test/**"
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+

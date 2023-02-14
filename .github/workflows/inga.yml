@@ -18,3 +18,6 @@ jobs:
       with:
         language: "java"
         exclude: "src/test/**"
+    - run: |
+      echo 'head sha: ${{ github.event.pull_request.head.sha }}'
+

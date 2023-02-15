@@ -62,9 +62,11 @@ public class Article {
       this.body = body;
       this.updatedAt = new DateTime();
     }
+    // aa
   }
 
   public static String toSlug(String title) {
+    // bb
     return title.toLowerCase().replaceAll("[\\&|[\\uFE30-\\uFFA0]|\\’|\\”|\\s\\?\\,\\.]+", "-");
   }
 }

@@ -22,5 +22,5 @@ jobs:
     - name: ls
       if: ${{ failure() }}
       run: |
-        ls -lsa
+        ls -lsa /github/workspace
         ls -lsa ${{ github.workspace }}

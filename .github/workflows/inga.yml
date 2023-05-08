@@ -19,3 +19,5 @@ jobs:
         language: "java"
         exclude: "src/test/**"
         github-token: ${{ secrets.GITHUB_TOKEN }}
+    - run: |
+      ls -lsa ${{ github.workspace }}

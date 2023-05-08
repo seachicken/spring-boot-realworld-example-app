@@ -21,6 +21,5 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: ls
       if: ${{ failure() }}
-      run: >
-        ls -lsa
-        ls -lsa ${{ github.workspace }}
+      run: ls -lsa
+      run: ls -lsa ${{ github.workspace }}

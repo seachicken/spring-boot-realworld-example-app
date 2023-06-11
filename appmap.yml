@@ -1,0 +1,6 @@
+name: spring-boot-realworld-example-app
+packages:
+- path: db.migration
+- path: io.spring
+- path: mapper
+- path: schema

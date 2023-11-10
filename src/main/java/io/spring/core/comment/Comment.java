@@ -18,6 +18,7 @@ public class Comment {
 
   public Comment(String body, String userId, String articleId) {
     this.id = UUID.randomUUID().toString();
+    // aa
     this.body = body;
     this.userId = userId;
     this.articleId = articleId;

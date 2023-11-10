@@ -16,6 +16,7 @@ public class ArticleCommandService {
   private ArticleRepository articleRepository;
 
   public Article createArticle(@Valid NewArticleParam newArticleParam, User creator) {
+    // change the code
     Article article =
         new Article(
             newArticleParam.getTitle(),

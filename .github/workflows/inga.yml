@@ -12,7 +12,7 @@ jobs:
       id-token: write
 
     environment:
-      name: inga-report
+      name: inga-report-${{ github.event.number }}
       url: ${{ steps.deployment.outputs.page_url }}inga-report-${{ github.event.number }}
 
     steps:

@@ -11,6 +11,10 @@ jobs:
       pages: write
       id-token: write
 
+    environment:
+      name: inga-report
+      url: ${{ steps.deployment.outputs.page_url }}/${{ github.event.number }}
+
     steps:
     - uses: actions/checkout@v3
       with:

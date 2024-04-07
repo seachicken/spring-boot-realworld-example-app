@@ -12,7 +12,7 @@ jobs:
       id-token: write
 
     environment:
-      url: ${{ steps.deployment.outputs.page_url }}-${{ github.event.number }}
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
     - uses: actions/checkout@v3

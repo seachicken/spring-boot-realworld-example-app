@@ -13,7 +13,7 @@ jobs:
 
     environment:
       name: inga-report
-      url: ${{ steps.deployment.outputs.page_url }}/${{ github.event.number }}
+      url: ${{ steps.deployment.outputs.page_url }}inga-report-${{ github.event.number }}
 
     steps:
     - uses: actions/checkout@v3

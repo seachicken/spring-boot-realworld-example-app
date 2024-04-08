@@ -12,8 +12,8 @@ jobs:
       id-token: write
 
     environment:
-      name: inga-report-${{ github.event.number }}
-      url: ${{ steps.deployment.outputs.page_url }}inga-report-${{ github.event.number }}
+      name: inga-report
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
     - uses: actions/checkout@v3
@@ -31,8 +31,12 @@ jobs:
       with:
         language: "java"
         exclude: "src/test/**"
+    - uses: actions/upload-pages-artifact@v3
+      with:
+        name: inga-report
+        path: inga-report/
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
       with:
-        artifact_name: inga-report-${{ github.event.number }}
+        artifact_name: inga-report

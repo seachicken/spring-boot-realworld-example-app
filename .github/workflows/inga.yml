@@ -25,7 +25,7 @@ jobs:
         distribution: 'temurin'
     - name: Compile with Gradle
       run: ./gradlew compileJava
-    - uses: seachicken/inga-action@main
+    - uses: seachicken/inga-action@fix-result
       with:
         language: "java"
         exclude: "src/test/**"

@@ -24,3 +24,4 @@ jobs:
       with:
         language: "java"
         exclude: "src/test/**"
+        inga-url: ${{ secrets.INGA_URL }}
